@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  dk-full-back:
+  ts-back:
     container_name: ts-backend
     build:
       context: ./backend
@@ -9,7 +9,7 @@ services:
     ports:
       - 5676:5676
 
-  dk-full-front:
+  ts-front:
     container_name: ts-frontend
     build:
       context: ./frontend
