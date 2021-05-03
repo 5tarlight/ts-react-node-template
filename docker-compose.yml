@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  dk-full-back:
+    container_name: ts-backend
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    ports:
+      - 5676:5676
+
+  dk-full-front:
+    container_name: ts-frontend
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - /app/frontend/node_module
