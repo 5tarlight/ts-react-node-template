@@ -8,6 +8,8 @@ services:
       dockerfile: dockerfile
     ports:
       - 5676:5676
+    volumes:
+      - /app/backend/node_module
 
   ts-front:
     container_name: ts-frontend
